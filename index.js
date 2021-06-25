@@ -1,4 +1,5 @@
 var data;
+var dataAgain;
 var news = document.getElementsByClassName("news")[0];
 var sec_1 = document.querySelector(".sec-1>h1");
 async function getNewsData() {
@@ -13,7 +14,6 @@ async function getNewsData() {
   }
 }
 async function main() {
-  con_div = null;
   data = await getNewsData();
   console.log(data);
   for (var i = 0; i < 10; i++) {
@@ -45,3 +45,10 @@ async function main() {
   }
 }
 main();
+function search(event) {
+  let search = document.getElementById("search").value;
+  if (event.key === "Enter") {
+    localStorage.setItem("search", search);
+    window.location.href = "search/search.html";
+  }
+}
