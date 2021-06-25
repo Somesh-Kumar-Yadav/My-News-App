@@ -4,7 +4,7 @@ var sec_1 = document.querySelector(".sec-1>h1");
 async function getNewsData() {
   try {
     let res = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&apiKey=40dd3e5dce9f42f6a9b841a2e9f71ab3`
+      `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=40dd3e5dce9f42f6a9b841a2e9f71ab3`
     );
     data = await res.json();
     return data;

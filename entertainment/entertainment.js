@@ -4,7 +4,7 @@ var sec_1 = document.querySelector(".sec-1>h1");
 async function getNewsData() {
   try {
     let res = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&apiKey=40dd3e5dce9f42f6a9b841a2e9f71ab3`
+      `https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=40dd3e5dce9f42f6a9b841a2e9f71ab3`
     );
     data = await res.json();
     return data;
@@ -27,7 +27,6 @@ async function main() {
       img.src =
         "https://st4.depositphotos.com/14953852/22772/v/600/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg";
     }
-
     let link = document.createElement("a");
     link.href = data.articles[i].url;
     let title = document.createElement("h2");
