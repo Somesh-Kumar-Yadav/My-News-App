@@ -11,7 +11,7 @@ var keyword = localStorage.getItem("search");
 async function getNewsData() {
   try {
     let res = await fetch(
-      `https://newsapi.org/v2/everything?q=${keyword}&apiKey=40dd3e5dce9f42f6a9b841a2e9f71ab3`
+      `https://newsapi.org/v2/everything?q=${keyword}&apiKey=8c922065aed74cf4b990f32efe4f8f5e`
     );
     data = await res.json();
     return data;
